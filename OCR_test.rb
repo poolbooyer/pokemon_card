@@ -4,7 +4,7 @@ require 'net/https'
 
 IMAGE_FILE = './gx.jpg'
 
-API_KEY = 'AIzaSyBpr72OqQnISfWyYMKp4ZNWeKOIOlcPaMU'
+API_KEY = 'APIKEY'
 API_URL = "https://vision.googleapis.com/v1/images:annotate?key=#{API_KEY}"
 
 # 画像をbase64にエンコード
