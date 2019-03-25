@@ -1,10 +1,13 @@
 require 'base64'
 require 'json'
 require 'net/https'
+require 'inifile'
 
-IMAGE_FILE = './gx.jpg'
 
-API_KEY = 'APIKEY'
+setting=IniFile.load("./setting.ini")
+IMAGE_FILE = setting['IMAGE']['PATH']
+
+API_KEY = setting['API']['KEY']
 API_URL = "https://vision.googleapis.com/v1/images:annotate?key=#{API_KEY}"
 
 # 画像をbase64にエンコード
