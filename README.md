@@ -8,6 +8,9 @@
     - 実行結果はテキスト形式で保存
     - 実行に必要なキーをiniファイルで管理可能に変更
       - iniファイルの書式は setting_temp.iniを参照
+- 2019/3/31
+  - 画像認識結果の処理の変更
+    - 読み込んだ画像情報からカードのパック情報、index(XX/YY)、ポケモンのタイプ、名称を出力
 # 参考文献
 - [https://qiita.com/tmknom/items/f6c25fe91213af86f3a7]
 - [http://maeda.farend.ne.jp/blog/2012/03/05/ruby-inifile-gem/]
