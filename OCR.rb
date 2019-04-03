@@ -130,12 +130,6 @@ def get_cardinfo(description)
   return "404"
 end
 info=get_cardinfo(description)
-# カード情報が取得できたらその他の属性情報等を追加
-if info!="404" then
-  info.push(attribute)
-  info.push(name)
-end
-
 #ファイル書き出しし処理ファイル書き出し処理
 def file_write(payload)
   # ファイル名をポケモンの名称にする
@@ -144,5 +138,12 @@ def file_write(payload)
     text.puts(payload)
   end
 end
-#ファイル書き出し処理
-file_write(info)
+# カード情報が取得できたらその他の属性情報等を追加
+if info!="404" then
+  info.push(attribute)
+  info.push(name)
+  #ファイル書き出し処理
+  file_write(info)
+end
+
+
